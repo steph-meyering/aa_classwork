@@ -10,7 +10,7 @@ class PolyTreeNode
     end
 
     def inspect
-        "id:#{self.object_id}"
+        "parent: #{self.parent} value: #{self.value} - children: #{self.children} "
     end
 
     def parent=(parent_node)
@@ -26,15 +26,32 @@ class PolyTreeNode
     end
 
     def remove_child(child_node)
-        raise "not a child!" if !child_node.is_a?(PolyTreeNode)
+        if !self.children.include?(child_node)
+            raise "not a child!" 
+        end
         child_node.parent = nil
     end
-    
-    
+
+
+    def dfs(target)
+        # debugger
+        return self if self.value == target
+
+        self.children.each do |child|
+            result = child.dfs(target)
+            return result if !result.nil?
+        end
+        return nil
+    end
+
+    def bfs(target)
+        q = [self]
+        until q.empty?
+            el = q.shift
+            return el if el.value == target
+            q += el.children   #if !el.children.empty?
+        end
+        return nil
+    end
 end
 
-a = PolyTreeNode.new(1) # root
-b = PolyTreeNode.new(2) # child of a
-c = PolyTreeNode.new(3) # child of a
-
-# a.parent = nil
