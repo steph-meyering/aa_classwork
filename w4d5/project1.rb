@@ -106,10 +106,15 @@ def two_sum?(arr, target_sum)
   h = Hash.new(0)
 
   arr.each { |num| h[num] += 1 }
-  h.keys do |key|
+
+  h.each do |key, v|
     subtarget = target_sum - key
-    if !h[subtarget].nil?
-      return true
+    if h[subtarget] != 0 && (subtarget != key || (subtarget == key && v > 1))
+      return true 
+      # if subtarget == key
+      #   return true if v > 1
+      # end
+      # return true
     end 
   end
   false
@@ -120,4 +125,4 @@ arr = [0, 1, 5, 7]
 p two_sum?(arr, 6) # => should be true
 p two_sum?(arr, 10) # => should be false
 
-h = {0 => 1, 1 => 1, 5 => 1, 7 =>1}
+# h = {0 => 1, 1 => 1, 5 => 1, 7 =>1}
