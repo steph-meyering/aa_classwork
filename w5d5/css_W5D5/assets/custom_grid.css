@@ -1,0 +1,10 @@
+/* PUT FLUID GRID CODE HERE */
+.grid_left {
+  width: 30%;
+  float: left;
+}
+
+.grid_right {
+  width: 65%;
+  float: right;
+}
