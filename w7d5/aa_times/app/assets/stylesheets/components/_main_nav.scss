@@ -1,0 +1,46 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+
+}
+
+.left-nav > ul,
+.right-nav > ul {
+  display: flex;
+  align-items: center;
+}
+
+.left-nav > ul > li {
+	font-weight: 700;
+	font-family: "nyt-franklin",arial,helvetica,sans-serif;
+	text-transform: uppercase;
+	font-size: 0.6875rem;
+  text-align: center;
+  margin: 10px 10px;
+}
+.right-nav > ul > li > button {
+	text-transform: uppercase;
+}
+
+.right-nav > ul > li {
+  margin: 3px;
+}
+
+.right-nav > ul > li:last-of-type {
+  font-size: 16px;
+}
+
+.left-nav > ul > li:hover,
+.right-nav > ul > li:last-of-type:hover {
+  background-color: $lightest-gray;
+}
+
+.left-nav span {
+
+}
+
+
+.right-nav i {
+
+}
