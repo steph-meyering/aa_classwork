@@ -1,0 +1,25 @@
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 606px;
+    border: 2px solid black;
+    padding-inline-start: 0px;
+
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    list-style: none;
+    background-color: gray;
+    font-size: 100px;
+}
+
+.square:hover {
+    background-color: yellow;
+}
+
+.clicked-square {
+    background-color: tomato;
+}

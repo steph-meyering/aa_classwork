@@ -1,0 +1,9 @@
+/* PHASE 11: Icons */
+
+.icon-comment {
+    background-image: url("https://assets.aaonline.io/fullstack/html-css/micro-projects/css-friends/docs/images/sprite.png") ;
+    background-size: 25px 250px;
+      text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}

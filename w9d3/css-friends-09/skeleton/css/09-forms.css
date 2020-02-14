@@ -1,0 +1,14 @@
+/* PHASE 9: Forms */
+
+.content-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-form{
+    border: 1px solid black;
+
+}
+
+.thumb {
+}
