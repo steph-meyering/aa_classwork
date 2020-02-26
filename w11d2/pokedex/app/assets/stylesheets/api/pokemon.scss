@@ -1,0 +1,13 @@
+// Place all the styles related to the api/pokemon controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.pokedex {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.poke-img {
+    width: 100px;
+}
