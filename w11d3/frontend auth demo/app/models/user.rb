@@ -63,6 +63,15 @@ class User < ApplicationRecord
   def password=(password)
     # Set temporary instance variable so that we can validate length
     @password = password
+  def self.find_by_credentials(username, password)
+    user = User.find_by(username: username)
+    return nil unless user
+    user.is_password?(password) ? user : nil
+  end
+
+  def password=(password)
+    # Set temporary instance variable so that we can validate length
+    @password = password
     # Create a password_digest so that we do not have to store the plain-text password in our DB
     self.password_digest = BCrypt::Password.create(password)
   end
